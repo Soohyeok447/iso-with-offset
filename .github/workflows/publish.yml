@@ -24,7 +24,7 @@ jobs:
 
       - run: npm run test
         env:
-          TEST_EXPECTED: ${{ env.TEXT_EXPECTED }}
+          TEST_EXPECTED: ${{ env.TEST_EXPECTED }}
 
       - run: npm run deploy
         env:
