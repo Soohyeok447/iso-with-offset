@@ -37,18 +37,11 @@ Date.prototype.toKorISOString = function () {
 }
 
 
-const toKorISOString = (dateFormat?: string | number | Date) => {
-  const date = new Date();
+const toKorISOString = (value: string | number | Date) => {
+  const time = new Date(value).getTime();
 
-  const utc = date.getTime() + date.getTimezoneOffset() * 60000;
+  const diff = 9 * 60 * 60 * 1000;
 
-  const timeDiff = 9 * 60 * 60 * 1000;
-
-  const tzOffset = new Date().getTimezoneOffset() * 60000;
-
-  const korDate = dateFormat ? new Date(new Date(dateFormat).getTime() - tzOffset) : new Date(utc + timeDiff - tzOffset);
-
-  return korDate.toISOString();
+  return new Date(time + diff).toISOString();
 };
-
 
