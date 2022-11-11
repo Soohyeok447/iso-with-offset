@@ -17,12 +17,14 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-          
+
       - run: npm i
+
+      - run: echo "TEST_EXPECTED=2022-01-01T09:00:00.000Z" >> $GITHUB_ENV
 
       - run: npm run test
         env:
-          TEST_EXPECTED: "2022-01-01T13:00:00.000Z"
+          TEST_EXPECTED: ${{ env.TEXT_EXPECTED }}
 
       - run: npm run deploy
         env:
