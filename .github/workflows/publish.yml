@@ -18,6 +18,8 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
           
+      - run: npm i
+
       - run: npm run test
         env:
           TEST_EXPECTED: "2022-01-01T13:00:00.000Z"
