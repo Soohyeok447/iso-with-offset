@@ -7,7 +7,7 @@ const test = (name: string, fn: () => void) => {
 }
 
 const assert = (a: any, b: any) => {
-  if (a !== b) throw Error()
+  if (a !== b) throw Error(`${a} does not equal with ${b}`)
 }
 
 test("test string formatter", () => {
