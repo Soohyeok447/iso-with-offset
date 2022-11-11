@@ -1,0 +1,16 @@
+node_modules
+
+.github
+.DS_Store
+
+test
+
+.eslintrc.js
+.gitignore
+.npmignore
+.prettierrc
+
+tsconfig.json
+tsconfig.test.json
+
+src
