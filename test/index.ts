@@ -10,21 +10,23 @@ const assert = (a: any, b: any) => {
   if (a !== b) throw Error(`${a} does not equal with ${b}`)
 }
 
-test("test string formatter", () => {
-  const result = "2022-11-11 15:30".toKorISOString()
+const expected = process.env.TEST_EXPECTED;
 
-  assert(result, "2022-11-11T15:30:00.000Z")
+test("test string formatter", () => {
+  const result = "2022-01-01 00:00:00".toKorISOString()
+
+  assert(result, expected)
 })
 
 test("test Date formatter", () => {
-  const result = new Date("2022-11-11 15:30").toKorISOString()
+  const result = new Date("2022-01-01 00:00:00").toKorISOString()
 
-  assert(result, "2022-11-11T15:30:00.000Z")
+  assert(result, expected)
 })
 
 test("test number formatter", () => {
-  const result = (2533125421).toKorISOString()
+  const result = (1640962800000).toKorISOString()
 
-  assert(result, "1970-01-30T16:38:45.421Z")
+  assert(result, expected)
 })
 

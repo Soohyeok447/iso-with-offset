@@ -2,10 +2,15 @@
   "name": "korean-extensions",
   "version": "0.1.0",
   "description": "Extensions for every korean",
-  "keywords": ["date","korean","iso","format"],
+  "keywords": [
+    "date",
+    "korean",
+    "iso",
+    "format"
+  ],
   "main": "lib/index.js",
   "scripts": {
-    "deploy": "rm -rf ./lib && tsc -d && npm publish",    
+    "deploy": "rm -rf ./lib && tsc -d && npm publish",
     "test": "rm -rf ./lib && tsc --p \"./tsconfig.test.json\" && node ./lib/test/index.js"
   },
   "repository": {
@@ -16,7 +21,7 @@
   "license": "MIT",
   "homepage": "https://github.com/soohyeok8901/korean-extensions#readme",
   "devDependencies": {
-    "@types/node": "^18.7.13",
+    "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "eslint": "^8.21.0",
