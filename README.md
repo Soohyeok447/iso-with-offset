@@ -1,6 +1,6 @@
-# korean extensions
+# iso-with-offset
 
-한국인이라면 이 라이브러리 씁시다.
+Extension for Date
 
 ## Example
 ```ts

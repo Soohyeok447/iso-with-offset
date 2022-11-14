@@ -6,6 +6,6 @@
 
 - Make the implementation simple
 
-## 0.1.7
+## 0.1.8
 
 - Fix example on README
