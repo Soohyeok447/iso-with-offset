@@ -15,5 +15,11 @@ const expected = process.env.TEST_EXPECTED;
 test("test Date formatter", () => {
   const result = new Date("2022-01-01T00:00:00+09:00").toISOStringWithKorOffset();
 
+  console.log(new Date("2022-11-11 15:30").toISOStringWithKorOffset());
+
+  console.log(new Date("2022-01-01T00:00:00+09:00").toISOStringWithKorOffset());
+
+  console.log(new Date(new Date("2022-01-01T00:00:00+09:00").toISOStringWithKorOffset()));
+
   assert(result, expected);
 });
