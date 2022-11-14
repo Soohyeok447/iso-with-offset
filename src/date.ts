@@ -4,22 +4,22 @@ export { };
 declare global {
   interface Date {
     /**
-     * 타임존이 Asia/Seoul인 iso 8601 포맷의 datestring을 얻습니다.
+     * Asia/Seoul의 오프셋을 가진 iso 8601 포맷의 datestring을 얻습니다.
      * */
-    toKorISOString(): string;
+    toISOStringWithKorOffset(): string;
   }
 }
 
-Date.prototype.toKorISOString = function () {
-  return toKorISOString(this);
+Date.prototype.toISOStringWithKorOffset = function () {
+  return toISOStringWithKorOffset(this);
 };
 
-const toKorISOString = (value: Date) => {
+const toISOStringWithKorOffset = (value: Date) => {
   const local = value.getTime() - new Date().getTimezoneOffset() * 60 * 1000;
 
   const offset = (new Date().getTimezoneOffset() + 9 * 60) * 60 * 1000;
 
   const result = new Date(local + offset);
 
-  return result.toISOString();
+  return result.toISOString().slice(0, -1) + "+09:00";
 };

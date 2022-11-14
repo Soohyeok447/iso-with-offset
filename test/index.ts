@@ -13,7 +13,7 @@ const assert = (a: any, b: any) => {
 const expected = process.env.TEST_EXPECTED;
 
 test("test Date formatter", () => {
-  const result = new Date("2022-01-01 00:00:00").toKorISOString();
+  const result = new Date("2022-01-01T00:00:00+09:00").toISOStringWithKorOffset();
 
   assert(result, expected);
 });
