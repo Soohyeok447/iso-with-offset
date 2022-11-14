@@ -8,5 +8,5 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "outDir": "lib"
   },
-  "include": ["src/**/*.ts","./test/index.ts"]
+  "include": ["src/**/*.ts"]
 }

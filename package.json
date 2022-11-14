@@ -1,6 +1,6 @@
 {
   "name": "iso-with-offset",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "iso8601 with offset",
   "keywords": [
     "date",
