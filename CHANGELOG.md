@@ -8,4 +8,4 @@
 
 ## 0.1.7
 
-- Fix example
+- Fix example on README
