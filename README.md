@@ -2,6 +2,11 @@
 
 Extension for Date
 
+## Installation
+```console
+$ npm i iso-with-offset
+```
+
 ## Example
 ```ts
 import "iso-with-offset";
